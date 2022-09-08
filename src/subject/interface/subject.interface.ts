@@ -1,5 +1,5 @@
 export interface subject{
-    name:String;
+    name:string;
     description:string;
-    _id?:String;
+    _id?:string;
 }

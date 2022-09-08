@@ -2,6 +2,7 @@ import { Body, Controller, Get , Post } from '@nestjs/common';
 import { subject } from './interface/subject.interface';
 import { SubjectService } from './subject.service';
 import { CreateSubject } from './dto/subject.dto';
+import { Certificate } from 'crypto';
 
 @Controller('subject')
 export class SubjectController {
@@ -14,7 +15,8 @@ export class SubjectController {
     }
 
     @Post()
-    addSubject(@Body() CreateSubject:CreateSubject):Promise<subject>{
+    addSubject(@Body() CreateSubject:CreateSubject):any{
+        console.log(CreateSubject,"data at the controller");  
         return this.subjectService.addSubject(CreateSubject);
     }
 
