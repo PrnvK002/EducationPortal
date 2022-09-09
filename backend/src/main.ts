@@ -11,6 +11,7 @@ async function bootstrap() {
     AppModule,
     new FastifyAdapter({logger:true})
   );
+  app.enableCors();
   app.useGlobalPipes(new ValidationPipe({ whitelist:true }));
   await app.listen(4000);
   console.log(`Application is running on: ${await app.getUrl()}`);
