@@ -5,7 +5,7 @@ It is an education portal in which user can see different subjects and after cho
 
 ### Technologies used
 
-- Nestjs with nodejs as backend.
+- Nodejs with nestjs as backend.
 - Mongodb as database
 - React in frontend
 - redux toolkit for state management
